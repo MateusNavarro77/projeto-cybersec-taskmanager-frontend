@@ -38,8 +38,8 @@ import { ChecklistResponseDTO, TaskResponseDTO } from '../../../shared/models/ta
         </button>
       </div>
 
-      <div *ngIf="loading()" class="flex justify-center p-8">
-        <mat-progress-spinner mode="indeterminate" ></mat-progress-spinner>
+      <div *ngIf="loading()" class="flex justify-center items-center min-h-[60vh]">
+        <mat-progress-spinner mode="indeterminate" diameter="40"></mat-progress-spinner>
       </div>
 
       <div *ngIf="!loading() && checklist()" class="mb-8">

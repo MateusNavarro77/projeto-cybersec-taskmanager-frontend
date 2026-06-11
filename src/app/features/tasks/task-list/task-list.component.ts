@@ -36,8 +36,8 @@ import { TaskResponseDTO } from '../../../shared/models/taskmanager.models';
         </button>
       </div>
 
-      <div *ngIf="taskService.loading()" class="flex justify-center p-8">
-        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+      <div *ngIf="taskService.loading()" class="flex justify-center items-center min-h-[60vh]">
+        <mat-progress-spinner mode="indeterminate" diameter="40"></mat-progress-spinner>
       </div>
 
       <div *ngIf="!taskService.loading() && taskService.tasks().length === 0" class="text-center p-8 text-gray-500">
