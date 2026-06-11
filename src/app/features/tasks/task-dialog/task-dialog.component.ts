@@ -7,12 +7,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, provideNativeDateAdapter } from '@angular/material/core';
 import { TaskResponseDTO } from '../../../shared/models/taskmanager.models';
 
 @Component({
   selector: 'app-task-dialog',
   standalone: true,
+  providers: [provideNativeDateAdapter()],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -26,7 +27,7 @@ import { TaskResponseDTO } from '../../../shared/models/taskmanager.models';
   ],
   template: `
     <h2 mat-dialog-title>{{ data.task ? 'Edit Task' : 'New Task' }}</h2>
-    <mat-dialog-content>
+    <mat-dialog-content class="!py-4">
       <form [formGroup]="taskForm" class="flex flex-col gap-4 mt-2">
         <mat-form-field appearance="outline">
           <mat-label>Title</mat-label>

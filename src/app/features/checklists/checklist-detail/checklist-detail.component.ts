@@ -39,7 +39,7 @@ import { ChecklistResponseDTO, TaskResponseDTO } from '../../../shared/models/ta
       </div>
 
       <div *ngIf="loading()" class="flex justify-center p-8">
-        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+        <mat-progress-spinner mode="indeterminate" ></mat-progress-spinner>
       </div>
 
       <div *ngIf="!loading() && checklist()" class="mb-8">

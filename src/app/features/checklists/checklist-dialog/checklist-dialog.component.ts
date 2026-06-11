@@ -9,7 +9,6 @@ import { ChecklistResponseDTO } from '../../../shared/models/taskmanager.models'
 
 @Component({
   selector: 'app-checklist-dialog',
-  standalone: true,
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -20,7 +19,7 @@ import { ChecklistResponseDTO } from '../../../shared/models/taskmanager.models'
   ],
   template: `
     <h2 mat-dialog-title>{{ data.checklist ? 'Edit Checklist' : 'New Checklist' }}</h2>
-    <mat-dialog-content>
+    <mat-dialog-content class="!py-4">
       <form [formGroup]="checklistForm" class="flex flex-col gap-4 mt-2">
         <mat-form-field appearance="outline">
           <mat-label>Title</mat-label>
